@@ -13,7 +13,7 @@ class Calculator:
         self.reset_next = False
 
         self.text_input = StringVar()
-        self.screen = ttk.Label(root, textvariable=self.text_input, background="white", height=1, width=20, font=('Arial', 23))
+        self.screen = ttk.Label(root, textvariable=self.text_input, background="white", width=20, font=("Arial", 34), anchor=E)
         self.screen.grid(row=0, column=0, columnspan=5)
 
         buttons = [
@@ -26,7 +26,9 @@ class Calculator:
         ]
 
         for (text, row, col) in buttons:
-            ttk.Button(root, text=text, padding=30, font=('Arial', 14), command=lambda x=text: self.on_button_click(x)).grid(row=row, column=col)
+            style = ttk.Style()
+            style.configure('TButton', font=('Arial', 12))
+            ttk.Button(root, text=text, padding=20, style='TButton', command=lambda x=text: self.on_button_click(x)).grid(row=row, column=col)
 
     def on_button_click(self, char):
         if char in '0123456789.':

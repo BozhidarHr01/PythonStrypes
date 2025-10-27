@@ -1,0 +1,64 @@
+book|id=1 ;title=The Great Gatsby ;year=1925 ;genre=Fiction ;description=A book about the American dream. ;image_path= ;type=Book ;author=F. Scott Fitzgerald ;pages=180
+movie|id=2 ;title=Inception ;year=2010 ;genre=Sci-Fi ;description=A mind-bending thriller about dreams within dreams. ;image_path= ;type=Movie ;director=Christopher Nolan ;duration=148
+game|id=3 ;title=The Legend of Zelda: Breath of the Wild ;year=2017 ;genre=Adventure ;description=An open-world adventure game. ;image_path= ;type=Game ;platform=Nintendo ;developer=Nintendo Switch
+movie|id=5 ;title=The Matrix ;year=1999 ;genre=Sci-Fi ;description=A hacker discovers the nature of his reality. ;image_path= ;type=Movie ;director=The Wachowskis ;duration=136
+game|id=6 ;title=God of War ;year=2018 ;genre=Action ;description=A story-driven action game based on Norse mythology. ;image_path= ;type=Game ;platform=Santa Monica Studio ;developer=PlayStation 4
+book|id=7 ;title=1984 ;year=1949 ;genre=Dystopian ;description=A novel about a totalitarian regime and surveillance. ;image_path= ;type=Book ;author=George Orwell ;pages=328
+movie|id=8 ;title=The Shawshank Redemption ;year=1994 ;genre=Drama ;description=A story of hope and friendship in prison. ;image_path= ;type=Movie ;director=Frank Darabont ;duration=142
+game|id=9 ;title=Minecraft ;year=2011 ;genre=Sandbox ;description=A game about creativity and building in a blocky world. ;image_path= ;type=Game ;platform=Mojang Studios ;developer=Multiple Platforms
+book|id=10 ;title=The Hobbit ;year=1937 ;genre=Fantasy ;description=A fantasy novel about a hobbit's adventure to reclaim a lost dwarf kingdom. ;image_path= ;type=Book ;author=J.R.R. Tolkien ;pages=310
+movie|id=11 ;title=Pulp Fiction ;year=1994 ;genre=Crime ;description=A series of interconnected stories in the criminal underworld. ;image_path= ;type=Movie ;director=Quentin Tarantino ;duration=154
+game|id=12 ;title=The Witcher 3: Wild Hunt ;year=2015 ;genre=RPG ;description=An open-world RPG based on the Witcher book series. ;image_path= ;type=Game ;platform=CD Projekt Red ;developer=Multiple Platforms
+movie|id=14 ;title=Forrest Gump ;year=1994 ;genre=Drama ;description=The life journey of a simple man with a big heart. ;image_path= ;type=Movie ;director=Robert Zemeckis ;duration=142
+game|id=15 ;title=Red Dead Redemption 2 ;year=2018 ;genre=Action-Adventure ;description=An epic tale of life in America's unforgiving heartland. ;image_path= ;type=Game ;platform=Rockstar Games ;developer=Multiple Platforms
+book|id=16 ;title=The Catcher in the Rye ;year=1951 ;genre=Fiction ;description=A novel about teenage rebellion and alienation. ;image_path= ;type=Book ;author=J.D. Salinger ;pages=277
+movie|id=17 ;title=The Dark Knight ;year=2008 ;genre=Action ;description=Batman faces off against the Joker in Gotham City. ;image_path= ;type=Movie ;director=Christopher Nolan ;duration=152
+book|id=18 ;title=Brave New World ;year=1932 ;genre=Dystopian ;description=A futuristic society driven by technology and control. ;image_path= ;type=Book ;author=Aldous Huxley ;pages=268
+movie|id=19 ;title=Interstellar ;year=2014 ;genre=Sci-Fi ;description=A group of astronauts travel through a wormhole to save humanity. ;image_path= ;type=Movie ;director=Christopher Nolan ;duration=169
+game|id=20 ;title=Elden Ring ;year=2022 ;genre=Action RPG ;description=A vast open-world game crafted by FromSoftware and George R.R. Martin. ;image_path= ;type=Game ;platform=FromSoftware ;developer=Multiple Platforms
+book|id=21 ;title=The Lord of the Rings: The Fellowship of the Ring ;year=1954 ;genre=Fantasy ;description=The first part of the epic journey to destroy the One Ring. ;image_path= ;type=Book ;author=J.R.R. Tolkien ;pages=423
+movie|id=22 ;title=Gladiator ;year=2000 ;genre=Historical Drama ;description=A Roman general seeks revenge after being betrayed. ;image_path= ;type=Movie ;director=Ridley Scott ;duration=155
+game|id=23 ;title=Hollow Knight ;year=2017 ;genre=Metroidvania ;description=A mysterious adventure through a ruined insect kingdom. ;image_path= ;type=Game ;platform=Team Cherry ;developer=Multiple Platforms
+book|id=24 ;title=The Alchemist ;year=1988 ;genre=Philosophical Fiction ;description=A young shepherd embarks on a journey to find his destiny. ;image_path= ;type=Book ;author=Paulo Coelho ;pages=197
+movie|id=25 ;title=The Godfather ;year=1972 ;genre=Crime ;description=A mafia family's rise and struggles for power. ;image_path= ;type=Movie ;director=Francis Ford Coppola ;duration=175
+game|id=26 ;title=Super Mario Odyssey ;year=2017 ;genre=Platformer ;description=Mario embarks on a globe-trotting adventure to rescue Princess Peach. ;image_path= ;type=Game ;platform=Nintendo ;developer=Nintendo Switch
+book|id=27 ;title=The Picture of Dorian Gray ;year=1890 ;genre=Philosophical Fiction ;description=A man remains youthful while his portrait ages with his sins. ;image_path= ;type=Book ;author=Oscar Wilde ;pages=254
+movie|id=28 ;title=Parasite ;year=2019 ;genre=Thriller ;description=A poor family infiltrates a wealthy household with unexpected results. ;image_path= ;type=Movie ;director=Bong Joon-ho ;duration=132
+game|id=29 ;title=Cyberpunk 2077 ;year=2020 ;genre=RPG ;description=A futuristic open-world game set in the neon city of Night City. ;image_path= ;type=Game ;platform=CD Projekt Red ;developer=Multiple Platforms
+book|id=30 ;title=Crime and Punishment ;year=1866 ;genre=Psychological Fiction ;description=A man's moral struggles after committing a murder. ;image_path= ;type=Book ;author=Fyodor Dostoevsky ;pages=671
+movie|id=31 ;title=The Lion King ;year=1994 ;genre=Animation ;description=A young lion prince learns about responsibility and destiny. ;image_path= ;type=Movie ;director=Roger Allers & Rob Minkoff ;duration=88
+game|id=32 ;title=Dark Souls III ;year=2016 ;genre=Action RPG ;description=The final chapter in the challenging Dark Souls series. ;image_path= ;type=Game ;platform=FromSoftware ;developer=Multiple Platforms
+book|id=33 ;title=Frankenstein ;year=1818 ;genre=Gothic Fiction ;description=A scientist creates life and faces the consequences. ;image_path= ;type=Book ;author=Mary Shelley ;pages=280
+movie|id=34 ;title=Titanic ;year=1997 ;genre=Romance ;description=A love story unfolds aboard the doomed ocean liner. ;image_path= ;type=Movie ;director=James Cameron ;duration=195
+game|id=35 ;title=Portal 2 ;year=2011 ;genre=Puzzle ;description=A mind-bending puzzle game involving portals and witty AI. ;image_path= ;type=Game ;platform=Valve ;developer=Multiple Platforms
+movie|id=37 ;title=Avatar ;year=2009 ;genre=Sci-Fi ;description=Humans exploit a lush alien world called Pandora. ;image_path= ;type=Movie ;director=James Cameron ;duration=162
+game|id=38 ;title=Stardew Valley ;year=2016 ;genre=Simulation ;description=Build your farm, grow crops, and connect with townsfolk. ;image_path= ;type=Game ;platform=ConcernedApe ;developer=Multiple Platforms
+book|id=39 ;title=The Odyssey ;year=-800 ;genre=Epic ;description=Odysseus’ journey home after the Trojan War. ;image_path= ;type=Book ;author=Homer ;pages=541
+movie|id=40 ;title=The Silence of the Lambs ;year=1991 ;genre=Thriller ;description=A young FBI trainee seeks help from a brilliant but psychotic killer. ;image_path= ;type=Movie ;director=Jonathan Demme ;duration=118
+game|id=41 ;title=Overwatch ;year=2016 ;genre=Shooter ;description=A team-based multiplayer shooter set in a vibrant future. ;image_path= ;type=Game ;platform=Blizzard Entertainment ;developer=Multiple Platforms
+book|id=42 ;title=The Kite Runner ;year=2003 ;genre=Drama ;description=A story of friendship, betrayal, and redemption in Afghanistan. ;image_path= ;type=Book ;author=Khaled Hosseini ;pages=372
+movie|id=43 ;title=Joker ;year=2019 ;genre=Drama ;description=A failed comedian descends into madness in Gotham City. ;image_path= ;type=Movie ;director=Todd Phillips ;duration=122
+game|id=44 ;title=Assassin’s Creed Odyssey ;year=2018 ;genre=Action RPG ;description=Explore ancient Greece as a mercenary during the Peloponnesian War. ;image_path= ;type=Game ;platform=Ubisoft ;developer=Multiple Platforms
+book|id=45 ;title=The Da Vinci Code ;year=2003 ;genre=Thriller ;description=A symbologist uncovers secrets hidden in famous artworks. ;image_path= ;type=Book ;author=Dan Brown ;pages=489
+movie|id=46 ;title=Fight Club ;year=1999 ;genre=Drama ;description=A man starts an underground fight club to escape his mundane life. ;image_path= ;type=Movie ;director=David Fincher ;duration=139
+game|id=47 ;title=Mass Effect 2 ;year=2010 ;genre=RPG ;description=Commander Shepard assembles a team to save the galaxy. ;image_path= ;type=Game ;platform=BioWare ;developer=Multiple Platforms
+book|id=48 ;title=Dracula ;year=1897 ;genre=Gothic Horror ;description=The iconic vampire tale of Count Dracula’s move to England. ;image_path= ;type=Book ;author=Bram Stoker ;pages=418
+movie|id=49 ;title=The Prestige ;year=2006 ;genre=Mystery ;description=Two rival magicians compete in a dangerous rivalry. ;image_path= ;type=Movie ;director=Christopher Nolan ;duration=130
+game|id=50 ;title=Hades ;year=2020 ;genre=Roguelike ;description=Battle your way out of the underworld in this fast-paced action game. ;image_path= ;type=Game ;platform=Supergiant Games ;developer=Multiple Platforms
+book|id=51 ;title=The Chronicles of Narnia: The Lion, the Witch and the Wardrobe ;year=1950 ;genre=Fantasy ;description=Four siblings enter a magical world ruled by an evil witch. ;image_path= ;type=Book ;author=C.S. Lewis ;pages=208
+movie|id=52 ;title=The Social Network ;year=2010 ;genre=Drama ;description=The rise of Facebook and its founder’s legal battles. ;image_path= ;type=Movie ;director=David Fincher ;duration=120
+game|id=53 ;title=Bloodborne ;year=2015 ;genre=Action RPG ;description=Face your fears in a dark gothic city filled with horrors. ;image_path= ;type=Game ;platform=FromSoftware ;developer=PlayStation 4
+book|id=54 ;title=The Shining ;year=1977 ;genre=Horror ;description=A writer and his family face terrifying forces in an isolated hotel. ;image_path= ;type=Book ;author=Stephen King ;pages=447
+movie|id=55 ;title=Blade Runner 2049 ;year=2017 ;genre=Sci-Fi ;description=A new blade runner uncovers long-buried secrets about humanity. ;image_path= ;type=Movie ;director=Denis Villeneuve ;duration=164
+game|id=56 ;title=Celeste ;year=2018 ;genre=Platformer ;description=A young woman climbs a mountain while battling her inner demons. ;image_path= ;type=Game ;platform=Matt Makes Games ;developer=Multiple Platforms
+book|id=57 ;title=The Hunger Games ;year=2008 ;genre=Dystopian ;description=A girl must fight for survival in a televised death match. ;image_path= ;type=Book ;author=Suzanne Collins ;pages=374
+movie|id=58 ;title=Whiplash ;year=2014 ;genre=Drama ;description=A young drummer strives for greatness under an abusive instructor. ;image_path= ;type=Movie ;director=Damien Chazelle ;duration=107
+game|id=59 ;title=The Last of Us Part II ;year=2020 ;genre=Action-Adventure ;description=A gripping story of revenge and survival. ;image_path= ;type=Game ;platform=Naughty Dog ;developer=PlayStation 4
+movie|id=61 ;title=The Green Mile ;year=1999 ;genre=Drama ;description=A prison guard witnesses miraculous events on death row. ;image_path= ;type=Movie ;director=Frank Darabont ;duration=189
+game|id=62 ;title=Ghost of Tsushima ;year=2020 ;genre=Action-Adventure ;description=A samurai defends his homeland during the Mongol invasion. ;image_path= ;type=Game ;platform=Sucker Punch Productions ;developer=PlayStation 4
+book|id=63 ;title=The Girl with the Dragon Tattoo ;year=2005 ;genre=Thriller ;description=A journalist and hacker uncover dark family secrets. ;image_path= ;type=Book ;author=Stieg Larsson ;pages=465
+movie|id=64 ;title=Schindler’s List ;year=1993 ;genre=Historical Drama ;description=The story of a man who saved Jews during the Holocaust. ;image_path= ;type=Movie ;director=Steven Spielberg ;duration=195
+game|id=65 ;title=Resident Evil 4 ;year=2005 ;genre=Horror ;description=An agent rescues the president’s daughter from a sinister cult. ;image_path= ;type=Game ;platform=Capcom ;developer=Multiple Platforms
+book|id=66 ;title=The Name of the Wind ;year=2007 ;genre=Fantasy ;description=A gifted young man becomes the most legendary figure in the world. ;image_path= ;type=Book ;author=Patrick Rothfuss ;pages=662
+movie|id=67 ;title=Good Will Hunting ;year=1997 ;genre=Drama ;description=A janitor at MIT has a gift for mathematics. ;image_path= ;type=Movie ;director=Gus Van Sant ;duration=126
+game|id=68 ;title=Halo: Combat Evolved ;year=2001 ;genre=Shooter ;description=Master Chief battles the alien Covenant to save humanity. ;image_path= ;type=Game ;platform=Bungie ;developer=Multiple Platforms

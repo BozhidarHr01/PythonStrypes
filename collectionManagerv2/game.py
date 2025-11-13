@@ -19,7 +19,7 @@ class Game(Item):
             "type": "Game"
         })
         return data
-    
+
     @classmethod
     def from_dict(cls, data: dict):
         return cls(

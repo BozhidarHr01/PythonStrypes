@@ -4,7 +4,7 @@ from movie import Movie
 from game import Game
 from item import Item
 
-file_path = 'collectionManagerv2/collections.txt'
+file_path = 'collections.txt'
 
 class CollectionManager():
     def __init__(self):
@@ -19,6 +19,12 @@ class CollectionManager():
                 return item.print_details()
         return None
     
+    def get_image_path_for_item(self, item_name: str):
+        for item in self.items:
+            if item.title == item_name:
+                return item.get_image_path()
+        return None
+
     def add_item(self, item):
         self.items.append(item)
         self.save_collections()

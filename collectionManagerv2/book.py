@@ -20,6 +20,9 @@ class Book(Item):
         })
         return data
     
+    def get_image_path(self):
+        return self.image_path
+    
     @classmethod
     def from_dict(cls, data: dict):
         return cls(

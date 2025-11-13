@@ -4,6 +4,7 @@ from item import Item
 from game import Game
 from movie import Movie
 from book import Book
+from PIL import Image, ImageTk
 
 from collectionManager import CollectionManager
 
@@ -29,16 +30,16 @@ class CollectionManagerGUI:
         self.collection_buttons_frame = ttk.Frame(self.collections_frame, padding="5")
         self.collection_buttons_frame.grid(row=0, column=0, sticky=(N, S, E, W))
 
-        books_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/book.png").subsample(15, 15)
+        books_icon=PhotoImage(file="assets/button_icons/book.png").subsample(15, 15)
         label_books=Label(image=books_icon)
         label_books.image=books_icon
-        movies_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/movie.png").subsample(15, 15)
+        movies_icon=PhotoImage(file="assets/button_icons/movie.png").subsample(15, 15)
         label_movies=Label(image=movies_icon)
         label_movies.image=movies_icon
-        games_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/game.png").subsample(15, 15)
+        games_icon=PhotoImage(file="assets/button_icons/game.png").subsample(15, 15)
         label_games=Label(image=games_icon)
         label_games.image=games_icon
-        all_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/all_items.png").subsample(15, 15)
+        all_icon=PhotoImage(file="assets/button_icons/all_items.png").subsample(15, 15)
         label_all=Label(image=all_icon)
         label_all.image=all_icon
 
@@ -97,29 +98,29 @@ class CollectionManagerGUI:
         
         self.details_frame = ttk.Frame(self.root, padding="10")
         self.details_frame.grid(row=1, column=1, sticky=(N, S, E, W))
-        self.details_text = Text(self.details_frame, height=15, width=50, state="disabled")
-        self.details_text.grid(row=1, column=0, sticky=(N, S, E, W))
+        self.details_text = Text(self.details_frame, height=20, width=50, state="disabled")
+        self.details_text.grid(row=0, column=0, sticky=(N, S, E, W))
 
-        self.details_frame.columnconfigure(1, weight=1)
-        self.details_frame.rowconfigure(1, weight=1)
+        # self.details_frame.columnconfigure(1, weight=1)
+        # self.details_frame.rowconfigure(2, weight=1)
 
         self.collections_listbox.bind('<<ListboxSelect>>', self.show_details)
 
         self.buttons_frame = ttk.Frame(self.root, padding="10")
         self.buttons_frame.grid(row=2, column=0, columnspan=2, sticky=(E, W))
 
-        add_button_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/add_item.png").subsample(15, 15)
+        self.image_frame = ttk.Frame(self.root, padding = "10")
+        self.image_frame.grid(row = 1, column=2, columnspan=2, sticky=(N, S, E, W))
+
+        add_button_icon=PhotoImage(file="assets/button_icons/add_item.png").subsample(15, 15)
         label_add_button=Label(image=add_button_icon)
         label_add_button.image=add_button_icon
-        refresh_button_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/refresh.png").subsample(15, 15)
+        refresh_button_icon=PhotoImage(file="assets/button_icons/refresh.png").subsample(15, 15)
         label_refresh_button=Label(image=refresh_button_icon)
         label_refresh_button.image=refresh_button_icon
-        delete_button_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/remove_item.png").subsample(15, 15)
+        delete_button_icon=PhotoImage(file="assets/button_icons/remove_item.png").subsample(15, 15)
         label_delete_button=Label(image=delete_button_icon)
         label_delete_button.image=delete_button_icon
-        advanced_search_button_icon=PhotoImage(file="collectionManagerv2/assets/button_icons/search.png").subsample(15, 15)
-        label_advanced_search_button=Label(image=advanced_search_button_icon)
-        label_advanced_search_button.image=advanced_search_button_icon
 
         add_button = ttk.Button(self.buttons_frame, text="Add", image=add_button_icon, command=self.add_collection)
         add_button.grid(row=2, column=0, padx=20, pady=10)
@@ -130,9 +131,6 @@ class CollectionManagerGUI:
         delete_button = ttk.Button(self.buttons_frame, text="Delete", image=delete_button_icon, command=self.delete_collection)
         delete_button.grid(row=2, column=2, padx=20, pady=10)
 
-        advanced_search_button = ttk.Button(self.buttons_frame, text="Advanced Search", image=advanced_search_button_icon, compound=LEFT, command=lambda: self.advanced_search())
-        advanced_search_button.grid(row=2, column=3, padx=20, pady=10)
-
         self.collection_manager.load_collections() 
         self.load_collections()
 
@@ -141,150 +139,6 @@ class CollectionManagerGUI:
         filtered_items = [item for item in self.collection_manager.items if item.__class__.__name__ == collection_type]
         for item in filtered_items:
             self.collections_listbox.insert(END, item.title)
-
-    def advanced_search(self):
-        search_win = Toplevel(self.root)
-        search_win.title("Advanced Search")
-        search_win.transient(self.root)
-
-        type_var = StringVar(value="All")
-        title_var = StringVar()
-        year_var = StringVar()
-        genre_var = StringVar()
-        author_var = StringVar()
-        pages_var = StringVar()
-        director_var = StringVar()
-        duration_var = StringVar()
-        developer_var = StringVar()
-        platform_var = StringVar()
-
-        ttk.Label(search_win, text="Type:").grid(row=0, column=0, sticky=W, padx=5, pady=5)
-        ttk.OptionMenu(search_win, type_var, type_var.get(), "All", "Book", "Movie", "Game").grid(row=0, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Title:").grid(row=1, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=title_var).grid(row=1, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Year:").grid(row=2, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=year_var).grid(row=2, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Genre:").grid(row=3, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=genre_var).grid(row=3, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Separator(search_win).grid(row=4, column=0, columnspan=2, sticky=(W, E), pady=5)
-
-        ttk.Label(search_win, text="Author (Book):").grid(row=5, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=author_var).grid(row=5, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Pages (Book):").grid(row=6, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=pages_var).grid(row=6, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Director (Movie):").grid(row=7, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=director_var).grid(row=7, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Duration (min, Movie):").grid(row=8, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=duration_var).grid(row=8, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Developer (Game):").grid(row=9, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=developer_var).grid(row=9, column=1, padx=5, pady=5, sticky=(W, E))
-
-        ttk.Label(search_win, text="Platform (Game):").grid(row=10, column=0, sticky=W, padx=5, pady=5)
-        ttk.Entry(search_win, textvariable=platform_var).grid(row=10, column=1, padx=5, pady=5, sticky=(W, E))
-
-        results_listbox = Listbox(search_win, height=8, width=50)
-        results_listbox.grid(row=0, column=2, rowspan=11, padx=(10,0), pady=5, sticky=(N, S, E, W))
-        results_scroll = Scrollbar(search_win, orient=VERTICAL, command=results_listbox.yview)
-        results_scroll.grid(row=0, column=3, rowspan=11, sticky=(N, S), pady=5)
-        results_listbox.config(yscrollcommand=results_scroll.set)
-
-        search_win.columnconfigure(2, weight=1)
-        search_win.rowconfigure(11, weight=1)
-
-        found_items = []
-
-        def try_int(s):
-            try:
-                return int(s)
-            except Exception:
-                return None
-
-        def perform_search():
-            nonlocal found_items
-            q_type = type_var.get()
-            q_title = title_var.get().strip().lower()
-            q_year = try_int(year_var.get().strip())
-            q_genre = genre_var.get().strip().lower()
-            q_author = author_var.get().strip().lower()
-            q_pages = try_int(pages_var.get().strip())
-            q_director = director_var.get().strip().lower()
-            q_duration = try_int(duration_var.get().strip())
-            q_developer = developer_var.get().strip().lower()
-            q_platform = platform_var.get().strip().lower()
-
-            results_listbox.delete(0, END)
-            found_items = []
-
-            for item in self.collection_manager.items:
-                if q_type != "All" and item.__class__.__name__ != q_type:
-                    continue
-
-                match = True
-                if q_title and q_title not in getattr(item, "title", "").lower():
-                    match = False
-                if q_year is not None and getattr(item, "year", None) != q_year:
-                    match = False
-                if q_genre and q_genre not in getattr(item, "genre", "").lower():
-                    match = False
-                if q_author and q_author not in getattr(item, "author", "").lower():
-                    if q_author not in getattr(item, "developer", "").lower():
-                        match = False
-                if q_pages is not None and getattr(item, "pages", None) != q_pages:
-                    match = False
-                if q_director and q_director not in getattr(item, "director", "").lower():
-                    match = False
-                if q_duration is not None and getattr(item, "duration", None) != q_duration:
-                    match = False
-                if q_developer and q_developer not in getattr(item, "developer", "").lower():
-                    match = False
-                if q_platform and q_platform not in getattr(item, "platform", "").lower():
-                    match = False
-
-                if match:
-                    found_items.append(item)
-                    results_listbox.insert(END, f"{item.title} ({item.__class__.__name__})")
-
-        def on_result_select(evt):
-            sel = results_listbox.curselection()
-            if not sel:
-                return
-            idx = sel[0]
-            item = found_items[idx]
-            self.details_text.config(state="normal")
-            self.details_text.delete(1.0, END)
-            self.details_text.insert(END, f"Details for {item.title}\n\n{item}")
-            self.details_text.config(state="disabled")
-            try:
-                for i in range(self.collections_listbox.size()):
-                    if self.collections_listbox.get(i) == item.title:
-                        self.collections_listbox.selection_clear(0, END)
-                        self.collections_listbox.selection_set(i)
-                        self.collections_listbox.see(i)
-                        break
-            except Exception:
-                pass
-            search_win.destroy()
-
-        search_btn = ttk.Button(search_win, text="Search", command=perform_search)
-        search_btn.grid(row=11, column=0, padx=5, pady=8, sticky=(W, E))
-        clear_btn = ttk.Button(search_win, text="Clear Results", command=lambda: (results_listbox.delete(0, END), setattr(search_win, "found_items", [])))
-        clear_btn.grid(row=11, column=1, padx=5, pady=8, sticky=(W, E))
-        close_btn = ttk.Button(search_win, text="Close", command=search_win.destroy)
-        close_btn.grid(row=11, column=2, padx=5, pady=8, sticky=(E,))
-
-        results_listbox.bind("<<ListboxSelect>>", on_result_select)
-        results_listbox.bind("<Double-Button-1>", on_result_select)
-
-        search_win.focus_set()
-        search_win.grab_set()
 
     def update_items_count(self):
         count = self.collections_listbox.size()
@@ -297,9 +151,24 @@ class CollectionManagerGUI:
             self.details_text.config(state="normal")
             self.details_text.delete(1.0, END)
             self.details_text.insert(END, f"Details for {collection_name}")
+            
             item = self.collection_manager.get_item_details(collection_name)
+            
             self.details_text.insert(END, f"\n\n{item}")
             self.details_text.config(state="disabled")
+
+            image_path = self.collection_manager.get_image_path_for_item(collection_name)
+            if image_path:
+                image = Image.open(image_path)
+                resized_image = image.resize((150, 195))
+                img = ImageTk.PhotoImage(resized_image)
+                label = Label(self.image_frame, image=img)
+                label.grid(row=1, column=1, sticky=(N, S, E, W))
+                self.image_frame.columnconfigure(1,weight=1)
+                self.image_frame.rowconfigure(1,weight=1)
+                label.image = img
+            else:
+                label.image = None
 
     def load_collections(self):
         self.collections_listbox.delete(0, END)

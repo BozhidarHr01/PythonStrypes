@@ -13,10 +13,9 @@ movie|id=14 ;title=Forrest Gump ;year=1994 ;genre=Drama ;description=The life jo
 game|id=15 ;title=Red Dead Redemption 2 ;year=2018 ;genre=Action-Adventure ;description=An epic tale of life in America's unforgiving heartland. ;image_path= ;type=Game ;platform=Rockstar Games ;developer=Multiple Platforms
 book|id=16 ;title=The Catcher in the Rye ;year=1951 ;genre=Fiction ;description=A novel about teenage rebellion and alienation. ;image_path= ;type=Book ;author=J.D. Salinger ;pages=277
 movie|id=17 ;title=The Dark Knight ;year=2008 ;genre=Action ;description=Batman faces off against the Joker in Gotham City. ;image_path= ;type=Movie ;director=Christopher Nolan ;duration=152
-book|id=18 ;title=Brave New World ;year=1932 ;genre=Dystopian ;description=A futuristic society driven by technology and control. ;image_path= ;type=Book ;author=Aldous Huxley ;pages=268
 movie|id=19 ;title=Interstellar ;year=2014 ;genre=Sci-Fi ;description=A group of astronauts travel through a wormhole to save humanity. ;image_path= ;type=Movie ;director=Christopher Nolan ;duration=169
 game|id=20 ;title=Elden Ring ;year=2022 ;genre=Action RPG ;description=A vast open-world game crafted by FromSoftware and George R.R. Martin. ;image_path= ;type=Game ;platform=FromSoftware ;developer=Multiple Platforms
-book|id=21 ;title=The Lord of the Rings: The Fellowship of the Ring ;year=1954 ;genre=Fantasy ;description=The first part of the epic journey to destroy the One Ring. ;image_path= ;type=Book ;author=J.R.R. Tolkien ;pages=423
+book|id=21 ;title=The Lord of the Rings: The Fellowship of the Ring ;year=1954 ;genre=Fantasy ;description=The first part of the epic journey to destroy the One Ring. ;image_path=assets/movie_covers/lotr.jpg ;type=Book ;author=J.R.R. Tolkien ;pages=423
 movie|id=22 ;title=Gladiator ;year=2000 ;genre=Historical Drama ;description=A Roman general seeks revenge after being betrayed. ;image_path= ;type=Movie ;director=Ridley Scott ;duration=155
 game|id=23 ;title=Hollow Knight ;year=2017 ;genre=Metroidvania ;description=A mysterious adventure through a ruined insect kingdom. ;image_path= ;type=Game ;platform=Team Cherry ;developer=Multiple Platforms
 book|id=24 ;title=The Alchemist ;year=1988 ;genre=Philosophical Fiction ;description=A young shepherd embarks on a journey to find his destiny. ;image_path= ;type=Book ;author=Paulo Coelho ;pages=197

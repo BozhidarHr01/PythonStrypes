@@ -69,7 +69,7 @@ class CollectionManagerGUI:
         def focus_out(_):
             if not self.search_entry.get():
                 self.search_entry.insert(0, "Search...")
-                self.refresh_listbox()
+                self.refresh_collections()
 
         self.search_var = StringVar()
         self.search_entry = Entry(self.collections_frame, textvariable=self.search_var, width=30)
@@ -82,7 +82,7 @@ class CollectionManagerGUI:
         def on_search_change(*args):
             query = self.search_var.get().strip()
             if query == "Search..." or not query:
-                self.refresh_listbox()
+                self.refresh_collections()
             else:
                 filtered_items = self.collection_manager.search_items(query)
                 self.collections_listbox.delete(0, END)
